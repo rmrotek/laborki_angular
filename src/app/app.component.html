@@ -1,31 +1,4 @@
 <h1>Remigiusz Mrotek nr indeksu 52695</h1>
 
-<h3>Użycie ngModel</h3>
-<p>Imię ucznia to: {{ imie }}</p>
-<br>
-<label for="student">imię: </label>
-<input [(ngModel)]="imie"> {{ imie }}
-<br>
-<label for="student">nazwisko: </label>
-<input [(ngModel)]="nazwisko"> {{ nazwisko }}
-<br>
-<label for="student">wiek: </label>
-<input [(ngModel)]="wiek"> {{ wiek }}
-<br>
-<button (click)='clearData()'>Wyczysc pola</button>
-<button (click)='changeDisplay()'>Pokaz dane</button>
-
-<div [className]='dataDisplayClass'>
-  Dane ucznia:
-  <ul>
-    <li>
-      imie: {{ imie }}
-    </li>
-    <li>
-      nazwisko: {{ nazwisko }}
-    </li>
-    <li>
-      wiek: {{ wiek }}
-    </li>
-  </ul>
-</div>
+<app-studenci-view [studenciItems]="studenci"></app-studenci-view>
+<app-samochody [samochodyTitle]='samochodyTitle' [listaSamochodow]='listaSamochodow'></app-samochody>

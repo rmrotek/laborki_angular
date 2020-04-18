@@ -1,0 +1,6 @@
+<p>Studenci:</p>
+<ul *ngIf="studenciItems">
+    <li *ngFor="let student of studenciItems; let i = index">
+        {{ i + 1 }}) {{ student }}
+    </li>
+</ul>
