@@ -9,42 +9,15 @@ import { Component } from '@angular/core';
 // !
 
 export class AppComponent {
-  inputText = 'Moj input';
-  zmienKolor = 'color-black';
-  isDisabled = true;
-  kolorButtona = 'background-red';
+  imie = '';
+  nazwisko = '';
+  wiek = '18';
 
-  tekstZInputa = '';
-  pokazTekst = '';
-  
-  updateInputText(event) {
-    this.tekstZInputa = event.target.value;
-  }
-  pokazTekstInputa() {
-    this.pokazTekst = this.tekstZInputa;
-  }
-  
-  zmienKolorButtona() {
-    this.kolorButtona = 'background-blue';
+  dataDisplayClass = 'display-none';
+  // displayBlock = 'dispay-block';
+
+  changeDisplay() {
+    this.dataDisplayClass = 'display-block';
   }
 
-  onInputFocus() {
-    this.kolorButtona = 'background-red';
-  }
-
-  zmienUstawienia() {
-    this.isDisabled = false;
-  }
-  onFocus() {
-    this.zmienKolor = 'color-brown';
-  }
-  onClick(event) {
-    console.log(event);
-  }
-  onMouseMove(event) {
-    console.log('punktX: ' + event.clientX + ' punktY: ' + event.clientY);
-  }
-  onPaste() {
-    this.inputText = 'Wklejanie zabronione!';
-  }
 }

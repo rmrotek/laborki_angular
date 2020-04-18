@@ -1,19 +1,31 @@
 <h1>Remigiusz Mrotek nr indeksu 52695</h1>
-<h3 [className]="zmienKolor">Wprowadzenie do Angulara</h3>
-<input [disabled]="isDisabled" (focus)="onFocus()">
+
+<h3>Użycie ngModel</h3>
+<p>Imię ucznia to: {{ imie }}</p>
 <br>
-<input [disabled]="isDisabled" (click)="onClick($event)">
+<label for="student">imię: </label>
+<input [(ngModel)]="imie"> {{ imie }}
 <br>
-<input [disabled]="isDisabled" (mousemove)="onMouseMove($event)">
+<label for="student">nazwisko: </label>
+<input [(ngModel)]="nazwisko"> {{ nazwisko }}
 <br>
-<input [disabled]="isDisabled" (paste)="onPaste()"> {{ inputText }}
+<label for="student">wiek: </label>
+<input [(ngModel)]="wiek"> {{ wiek }}
 <br>
-<button (click)="zmienUstawienia()">edytuj</button>
-<button [className]="kolorButtona" (click)="zmienKolorButtona()">Zmien kolor</button>
-<br>
-<input (focus)="onInputFocus()">
-<br>
-<input (keyup)='updateInputText($event)'>
-<button (click)="pokazTekstInputa()">pokaz tekst z inputa</button>
-<br>
-{{ pokazTekst }}
+<button >Wyczysc pola</button>
+<button (click)='changeDisplay()'>Pokaz dane</button>
+
+<div [className]='dataDisplayClass'>
+  Dane ucznia:
+  <ul>
+    <li>
+      imie: {{ imie }}
+    </li>
+    <li>
+      nazwisko: {{ nazwisko }}
+    </li>
+    <li>
+      wiek: {{ wiek }}
+    </li>
+  </ul>
+</div>
