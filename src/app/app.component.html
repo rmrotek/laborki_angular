@@ -12,3 +12,8 @@
 <button [className]="kolorButtona" (click)="zmienKolorButtona()">Zmien kolor</button>
 <br>
 <input (focus)="onInputFocus()">
+<br>
+<input (keyup)='updateInputText($event)'>
+<button (click)="pokazTekstInputa()">pokaz tekst z inputa</button>
+<br>
+{{ pokazTekst }}

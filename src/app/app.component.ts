@@ -12,8 +12,17 @@ export class AppComponent {
   inputText = 'Moj input';
   zmienKolor = 'color-black';
   isDisabled = true;
-
   kolorButtona = 'background-red';
+
+  tekstZInputa = '';
+  pokazTekst = '';
+  
+  updateInputText(event) {
+    this.tekstZInputa = event.target.value;
+  }
+  pokazTekstInputa() {
+    this.pokazTekst = this.tekstZInputa;
+  }
   
   zmienKolorButtona() {
     this.kolorButtona = 'background-blue';
