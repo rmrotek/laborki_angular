@@ -19,6 +19,10 @@ export class AppComponent {
     this.kolorButtona = 'background-blue';
   }
 
+  onInputFocus() {
+    this.kolorButtona = 'background-red';
+  }
+
   zmienUstawienia() {
     this.isDisabled = false;
   }
