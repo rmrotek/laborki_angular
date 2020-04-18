@@ -12,7 +12,7 @@
 <label for="student">wiek: </label>
 <input [(ngModel)]="wiek"> {{ wiek }}
 <br>
-<button >Wyczysc pola</button>
+<button (click)='clearData()'>Wyczysc pola</button>
 <button (click)='changeDisplay()'>Pokaz dane</button>
 
 <div [className]='dataDisplayClass'>

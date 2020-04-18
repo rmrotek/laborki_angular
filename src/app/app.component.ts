@@ -14,10 +14,15 @@ export class AppComponent {
   wiek = '18';
 
   dataDisplayClass = 'display-none';
-  // displayBlock = 'dispay-block';
 
   changeDisplay() {
     this.dataDisplayClass = 'display-block';
+  }
+
+  clearData() {
+    this.imie = '';
+    this.nazwisko = '';
+    this.wiek = '';
   }
 
 }
