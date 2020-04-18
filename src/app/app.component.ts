@@ -12,6 +12,13 @@ export class AppComponent {
   inputText = 'Moj input';
   zmienKolor = 'color-black';
   isDisabled = true;
+
+  kolorButtona = 'background-red';
+  
+  zmienKolorButtona() {
+    this.kolorButtona = 'background-blue';
+  }
+
   zmienUstawienia() {
     this.isDisabled = false;
   }
