@@ -11,38 +11,52 @@ import { Samochod } from './samochod';
 
 export class AppComponent implements OnInit {
   studenci: string[];
-  isCreated = false;
+  listaSamochodow: Samochod[];
+  samochodyTitle = 'Moje Samochody';
+  isStudentCreated = false;
+  isSamochodCreated = false;
   ngOnInit(): void {
     this.studenci = ['Karol', 'Basia', 'Adam', 'Teresa', 'Wojciech',
       'Ziemowit'];
+    this.listaSamochodow = [
+      {
+        marka: 'bmw',
+        model: '520d',
+        rok: 2010
+      },
+      {
+        marka: 'bmw',
+        model: '520d'
+      },
+      {
+        marka: 'audi',
+        model: 'bez kierunkowskazow'
+      }
+    ];
   }
   onAddStudent(student: string) {
     if (this.studenci.includes(student)) {
-      this.isCreated = true;
+      this.isStudentCreated = true;
     } else {
-      this.isCreated = false;
+      this.isStudentCreated = false;
       this.studenci.push(student);
     }
   }
   onUsunStudent(index: number) {
-    this.isCreated = false;
+    this.isStudentCreated = false;
     this.studenci.splice(index, 1);
   }
-}
 
-// samochodyTitle = 'Moje Samochody';
-// listaSamochodow: Samochod[] = [
-//   {
-//     marka: 'bmw',
-//     model: '520d',
-//     rok: 2010
-//   },
-//   {
-//     marka: 'bmw',
-//     model: '520d'
-//   },
-//   {
-//     marka: 'audi',
-//     model: 'bez kierunkowskazow'
-//   }
-// ];
+  onAddSamochod(samochod: Samochod) {
+    if (this.listaSamochodow.includes(samochod)) {
+      this.isSamochodCreated = true;
+    } else {
+      this.isSamochodCreated = false;
+      this.listaSamochodow.push(samochod);
+    }
+  }
+  onUsunSamochod(index: number) {
+    this.isSamochodCreated = false;
+    this.listaSamochodow.splice(index, 1);
+  }
+}

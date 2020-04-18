@@ -1,8 +1,18 @@
 <h1>Remigiusz Mrotek nr indeksu 52695</h1>
 
-<p *ngIf="isCreated" [ngStyle]="{color: 'red'}">Student już istnieje!</p>
-<app-studenci-view [studenciItems]="studenci" (addStudent)="onAddStudent($event)" (usunStudent)="onUsunStudent($event)">
+<p *ngIf="isStudentCreated" [ngStyle]="{color: 'red'}">Student już istnieje!</p>
+<p *ngIf="isSamochodCreated" [ngStyle]="{color: 'red'}">Samochod już istnieje!</p>
+
+<app-studenci-view
+[studenciItems]="studenci"
+(addStudent)="onAddStudent($event)"
+(usunStudent)="onUsunStudent($event)">
 </app-studenci-view>
 
 
-<!-- <app-samochody [samochodyTitle]='samochodyTitle' [listaSamochodow]='listaSamochodow'></app-samochody> -->
+<app-samochody
+[samochodyTitle]='samochodyTitle'
+[listaSamochodow]='listaSamochodow'
+(addSamochod)="onAddSamochod($event)"
+(usunSamochod)="onUsunSamochod($event)"
+></app-samochody>
