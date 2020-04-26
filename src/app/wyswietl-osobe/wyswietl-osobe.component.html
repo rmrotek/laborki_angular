@@ -1,0 +1,11 @@
+<h3>Wyświetl osoby:</h3>
+<ul *ngIf="osoby?.length > 0">
+    <li *ngFor="let osoba of osoby">
+        {{ osoba }}
+        <button (click)="onClick(osoba)">Wybierz</button>
+    </li>
+</ul>
+<br>
+<button [disabled]="osoby?.length < 1" (click)=onReset()>
+    Reset
+</button>

@@ -1,0 +1,7 @@
+<h3>Wybierz osobę</h3>
+<ul *ngIf="osoby">
+    <li *ngFor="let osoba of osoby">
+        {{ osoba }}
+        <button (click)="onClick(osoba)">Wybierz</button>
+    </li>
+</ul>

@@ -9,5 +9,5 @@ import { Component, OnInit } from '@angular/core';
 // !
 
 export class AppComponent {
-  tekstWZmiennej = 'To jest tekst z pola z pliku .ts';
+  osoby: string[] = ['Kasia', 'Basia', 'Zosia', 'Tomek', 'Marek', 'Antek'];
 }

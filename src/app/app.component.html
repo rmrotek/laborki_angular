@@ -1,8 +1,11 @@
 <h3>Remigiusz Mrotek nr indeksu 52695</h3>
 
-<app-child1>
-    Wprowadzony tekst dzięki ng-content, <br>
-    między znaczniki componentu wyswietlanego <br>
-    {{ tekstWZmiennej }} <br>
-    <app-child2></app-child2>
-</app-child1>
+<h1>Laboratorium Angular</h1>
+<div class="main-content">
+    <div>
+        <app-wybierz-osobe [osoby]="osoby"></app-wybierz-osobe>
+    </div>
+    <div>
+        <app-wyswietl-osobe></app-wyswietl-osobe>
+    </div>
+</div>
