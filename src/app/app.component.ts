@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 // ! TEGO NIE USUWAC
 @Component({
@@ -8,6 +8,4 @@ import { Component, OnInit } from '@angular/core';
 })
 // !
 
-export class AppComponent {
-  osoby: string[] = ['Kasia', 'Basia', 'Zosia', 'Tomek', 'Marek', 'Antek'];
-}
+export class AppComponent {}
