@@ -1,18 +1,8 @@
-<h1>Remigiusz Mrotek nr indeksu 52695</h1>
+<h3>Remigiusz Mrotek nr indeksu 52695</h3>
 
-<p *ngIf="isStudentCreated" [ngStyle]="{color: 'red'}">Student już istnieje!</p>
-<p *ngIf="isSamochodCreated" [ngStyle]="{color: 'red'}">Samochod już istnieje!</p>
-
-<app-studenci-view
-[studenciItems]="studenci"
-(addStudent)="onAddStudent($event)"
-(usunStudent)="onUsunStudent($event)">
-</app-studenci-view>
-
-
-<app-samochody
-[samochodyTitle]='samochodyTitle'
-[listaSamochodow]='listaSamochodow'
-(addSamochod)="onAddSamochod($event)"
-(usunSamochod)="onUsunSamochod($event)"
-></app-samochody>
+<app-child1>
+    Wprowadzony tekst dzięki ng-content, <br>
+    między znaczniki componentu wyswietlanego <br>
+    {{ tekstWZmiennej }} <br>
+    <app-child2></app-child2>
+</app-child1>
