@@ -10,8 +10,7 @@ export class WyswietlOsobeComponent implements OnInit {
   osoby: string[];
   constructor(private daneOsobyService: DaneOsobyService) { }
   ngOnInit() {
-    this.daneOsobyService.dajOsoby().subscribe(osoby => this.osoby =
-      osoby);
+    this.daneOsobyService.dajWybraneOsoby().subscribe(osoby => this.osoby = osoby);
   }
   onReset() {
     this.daneOsobyService.reset();
@@ -19,5 +18,8 @@ export class WyswietlOsobeComponent implements OnInit {
   onClick(osoba: string) {
     this.daneOsobyService.usunOsobe(osoba);
     console.log('osoba', osoba);
+  }
+  onDelete(osoba: string) {
+    this.daneOsobyService.usunDane(osoba);
   }
 }

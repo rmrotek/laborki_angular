@@ -3,5 +3,6 @@
     <li *ngFor="let osoba of osoby">
         {{ osoba }}
         <button (click)="onClick(osoba)">Wybierz</button>
+        <button (click)="onDelete(osoba)">Usuń</button>
     </li>
 </ul>

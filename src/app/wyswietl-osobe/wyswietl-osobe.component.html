@@ -3,6 +3,7 @@
     <li *ngFor="let osoba of osoby">
         {{ osoba }}
         <button (click)="onClick(osoba)">Odrzuć</button>
+        <button (click)="onDelete(osoba)">Usuń</button>
     </li>
 </ul>
 <br>

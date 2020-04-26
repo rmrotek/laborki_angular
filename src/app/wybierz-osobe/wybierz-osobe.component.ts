@@ -6,11 +6,18 @@ import { DaneOsobyService } from '../services/dane-osoby.service';
   templateUrl: './wybierz-osobe.component.html',
   styleUrls: ['./wybierz-osobe.component.scss']
 })
-export class WybierzOsobeComponent {
-  @Input() osoby: string[];
+export class WybierzOsobeComponent implements OnInit {
+  osoby: string[];
   constructor(private daneOsobyService: DaneOsobyService) { }
+  ngOnInit() {
+    this.daneOsobyService.dajListeOsob().subscribe(osoby => this.osoby =
+      osoby);
+  }
   onClick(osoba: string) {
     this.daneOsobyService.dodajOsobe(osoba);
     console.log('osoba', osoba);
+  }
+  onDelete(osoba: string) {
+    this.daneOsobyService.usunDane(osoba);
   }
 }
